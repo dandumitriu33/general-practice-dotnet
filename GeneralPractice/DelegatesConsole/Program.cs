@@ -11,13 +11,37 @@ namespace DelegatesConsole
         {
             PopulateCartWithDemoData();
             decimal total = cart.GenerateTotal(SubTotalAlert,
-                                               CalculateLeveledDiscount);
+                                               CalculateLeveledDiscount,
+                                               AlertUser);
             Console.WriteLine($"The total for the cart is {total:C2}");
+            Console.WriteLine();
+
+            decimal cart2Total = cart.GenerateTotal(
+                (subTotal) => Console.WriteLine($"Cart 2: The subtotal is: {subTotal:C2}"),
+                (products, subTotal) =>
+                {
+                    if (products.Count > 3)
+                    {
+                        return subTotal * 0.5M; // different calculation than the first one
+                    }
+                    else
+                    {
+                        return subTotal;
+                    }
+                },
+                (message) => Console.WriteLine($"Cart 2: Alert: {message}")
+                );
+            Console.WriteLine($"Cart 2: Total: {cart2Total:C2}");
         }
 
         private static void SubTotalAlert(decimal subTotal)
         {
             Console.WriteLine($"The subtotal is {subTotal:C2}");
+        }
+
+        private static void AlertUser(string message)
+        {
+            Console.WriteLine(message);
         }
 
         private static decimal CalculateLeveledDiscount(List<ProductModel> items, decimal subTotal)
