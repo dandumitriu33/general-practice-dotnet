@@ -7,11 +7,14 @@ namespace DelegatesLibrary
 {
     public class ShoppingCartModel
     {
+        public delegate void MentionDiscount(decimal subTotal);
         public List<ProductModel> Items { get; set; } = new List<ProductModel>();
 
-        public decimal GenerateTotal()
+        public decimal GenerateTotal(MentionDiscount mentionDiscount)
         {
             decimal subTotal = Items.Sum(x => x.Price);
+            // the method we pass in will be used here - like a variable
+            mentionDiscount(subTotal);
 
             if (subTotal > 100)
             {

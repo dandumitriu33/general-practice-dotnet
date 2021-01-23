@@ -10,8 +10,14 @@ namespace DelegatesConsole
         {
             PopulateCartWithDemoData();
 
-            Console.WriteLine($"The total for the cart is {cart.GenerateTotal():C2}");
+            decimal total = cart.GenerateTotal(SubTotalAlert);
+            Console.WriteLine($"The total for the cart is {total:C2}");
 
+        }
+
+        private static void SubTotalAlert(decimal subTotal)
+        {
+            Console.WriteLine($"The subtotal is {subTotal:C2}");
         }
 
         private static void PopulateCartWithDemoData()
