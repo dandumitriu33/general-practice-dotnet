@@ -7,9 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Initial", "Initial\Initial.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RefOut", "RefOut\RefOut.csproj", "{3E906DEB-02D7-4453-8369-7B3D43B489BD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesConsole", "DelegatesConsole\DelegatesConsole.csproj", "{45F3CB74-1D8D-4C89-B476-82F0462E4738}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesConsole", "DelegatesConsole\DelegatesConsole.csproj", "{45F3CB74-1D8D-4C89-B476-82F0462E4738}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegatesLibrary", "DelegatesLibrary\DelegatesLibrary.csproj", "{757C603E-9C78-48CC-BDFC-1CA71AA0ECAD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DelegatesLibrary", "DelegatesLibrary\DelegatesLibrary.csproj", "{757C603E-9C78-48CC-BDFC-1CA71AA0ECAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GenericsConsole", "GenericsConsole\GenericsConsole.csproj", "{53DF57A7-336D-4FAA-9B08-550236FBD6FF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{757C603E-9C78-48CC-BDFC-1CA71AA0ECAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{757C603E-9C78-48CC-BDFC-1CA71AA0ECAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{757C603E-9C78-48CC-BDFC-1CA71AA0ECAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{53DF57A7-336D-4FAA-9B08-550236FBD6FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{53DF57A7-336D-4FAA-9B08-550236FBD6FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{53DF57A7-336D-4FAA-9B08-550236FBD6FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{53DF57A7-336D-4FAA-9B08-550236FBD6FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
