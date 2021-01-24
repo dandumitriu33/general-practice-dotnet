@@ -1,4 +1,4 @@
-FirstName,IsAlive,LastName
-Tim,True,Corey
-Sue,False,Storm
-John,True,Smith
+FirstName,LastName,IsAlive
+Tim,Corey,True
+Sue,Storm,False
+John,Smith,True
