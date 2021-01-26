@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Yield
 {
@@ -14,9 +15,9 @@ namespace Yield
                 Console.WriteLine(i);
             }
 
-            Console.WriteLine("yield break example: ");
+            Console.WriteLine("yield break example, with Linq, not a list written on a new line, each answer is a return ");
 
-            foreach (var i in PositiveInts2(5))
+            foreach (var i in PositiveInts2(5).Select(i => i*i))
             {
                 Console.WriteLine(i);
             }
@@ -44,6 +45,7 @@ namespace Yield
             int i = 1;
             while (true)
             {
+                Console.WriteLine("getting next element");
                 yield return i++;
                 if (i >= max)
                 {
