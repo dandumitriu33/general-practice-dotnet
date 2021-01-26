@@ -21,7 +21,22 @@ namespace Yield
                 Console.WriteLine(i);
             }
 
+            Console.WriteLine("Yield on property");
 
+            foreach (var n in Names)
+            {
+                Console.WriteLine(n);
+            }
+        }
+
+        public static IEnumerable<string> Names
+        {
+            get
+            {
+                yield return "James";
+                yield return "John";
+                yield return "Mike";
+            }
         }
 
         public static IEnumerable<int> PositiveInts2(int max)
